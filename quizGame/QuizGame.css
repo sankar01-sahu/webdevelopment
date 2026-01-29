@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: ProductSans;
+    src: url(../../Assets/fonts/ProductSansBold.ttf);
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#container{
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    border: 2px solid blue;
+}
+#title{
+    font-size: 50px;
+    margin: 20px;
+}
+#question{
+    font-size: 30px;
+    margin: 10px;
+}
+.optionButtons{
+    font-size: 15px;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: 2px solid black;
+}
