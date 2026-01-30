@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
       productDetails.innerHTML =
         `
  <main>
-          <div class="product-container">
-            <div class="product-image">
+          <div class="product_container">
+            <div class="product_image">
               <img src="${selectedProduct.thumbnail}" alt="${selectedProduct.title}">
             </div>
 
-            <div class="product-info">
+            <div class="product_info">
               <h1q34wyuz5ei9ovgb>${selectedProduct.title}</h1q34wyuz5ei9ovgb>
               <p><b>Brand:</b> ${selectedProduct.brand}</p>
               <p><b>Category:</b> ${selectedProduct.category}</p>
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="price">₹ ${selectedProduct.price * 90}</p>
 
 
-              <div class="btn-group">
-                <button class="add-cart" id = "addToCart" onclick="addToCart(${selectedProduct})">Add to Cart</button>
-                <button class="back-home" onclick="history.back()">Back to Home</button>
+              <div class="btn_group">
+                <button class="addTocart" id = "addToCart" onclick="addToCart(${selectedProduct})">Add to Cart</button>
+                <button class="backTohome" onclick="history.back()">Back to Home</button>
               </div>
             </div>
           </div>

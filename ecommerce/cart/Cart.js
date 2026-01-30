@@ -15,19 +15,26 @@ function displayCart(){
         cartContent.innerHTML =`Your cart is Empty. Start Shopping...`;
     }
     cart.map((product,i)=>{
-        // console.log(product);
-        cartContent.innerHTML += `
+        totalBill +=Math.floor((product.price)*90)
+        console.log(product,i);
+        let newProd =document.createElement("div")
+        newProd.setAttribute("class","Prod-info")
+        
+        newProd.innerHTML += `
         <main>
-            <div class="cart-item">
-                <img src="${product.thumbnail}" alt="${product.title}">
-            <div class="item-info">
-                <h3>${product.title}</h3>
-                <p>₹ ${product.price * 90}</p>
-                <button id="remove" onclick="removeFromCart(${i})">Remove</button>
+            <div class="cart_item">
+                <div id="image">
+                    <img src="${product.thumbnail}" alt="${product.title}">
+                </div>
+                <div class="item_info">
+                    <h3>${product.title}</h3>
+                    <p>₹ ${product.price * 90}</p>
+                    <button id="remove" onclick="removeFromCart(${i})">Remove</button>
+                </div>
             </div>
-        </div>
         </main>
     `;
+    cartContent.append(newProd);
     document.getElementById("remove").addEventListener("click",()=>{
         remove.cartContent;
     })
