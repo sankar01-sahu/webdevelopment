@@ -42,7 +42,7 @@ function displayCart(){
     `;
     cartContent.append(newProd);
     });
-    totalPrice.innerHTML = `<h2>Total Price :₹ ${totalBill}</h2>`
+    totalPrice.innerHTML = `<h2 id="total_Price">Total Price :₹ ${totalBill}</h2>`
 
     // document.getElementById("remove").addEventListener("click",()=>{
     //     remove.cartContent;

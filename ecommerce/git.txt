@@ -1,6 +1,13 @@
+//!-----formula--------
 git add .
 git commit -m "message you wanna give"
 git push origin main 
 
 
 git pull origin main
+
+//!---------using this----
+git add .
+git commit -m "commit"
+git push origin main
+
