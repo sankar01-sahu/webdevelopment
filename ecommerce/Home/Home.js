@@ -17,15 +17,15 @@ function displayProduct(prod){
         output +=`
         <main>
         <div id="image">
-            <image src="${val.thumbnail}"/>
+            <img src="${val.thumbnail}"/>
         </div>
         <h3>${val.title}</h3>
         <div id="ratingBox">
-            <p id="rating">Rating: ${val.rating}⭐</p>
-            <p>Price: ₹${Math.round((val.price)*90)}</p>
+            <p id="rating"> ${val.rating}⭐</p>
+            <p> ₹${Math.round((val.price)*90)}</p>
         </div>
         <div id="detailsBox">
-            <p>Instock: ${val.stock}</p>
+            <p>${val.stock}-Stocks</p>
             <button id="detailsButton" onclick="details(${val.id})">Details</button>
         </div>
         </main>

@@ -104,9 +104,11 @@ a:hover::after{
 
 #productContainer main{
     width: 300px;
-    height: 400px;
+    height: 430px;
     /* background-image: linear-gradient(red,yellow); */
-    background-color: rgb(174, 179, 79);
+    /* background-color: rgb(174, 179, 79); */
+    background-color: #ffffff;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.8);
     margin-top: 10px;
     border-radius: 10px;
 }
@@ -130,29 +132,37 @@ h3{
 }
 #image{
     height: 250px;
-    width: 300px;
-    background-color: antiquewhite;
+    width: 250px;
+    /* background-color: antiquewhite; */
+    background-color: #f9fafb;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    margin: 20px;
 }
 #ratingBox, #detailsBox{
     /* padding-left: 20px; */
-    font-size: 20px;
+    font-size: 15px;
     display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
+    justify-content: space-between;
+    margin: 13px 25px;
     cursor: pointer;
+    font-weight: 600;
+}
+#detailsBox p{
+    color: red;
 }
 #rating{
-    background-image: linear-gradient(red,yellow);
+    /* background-image: linear-gradient(red,yellow); */
     /* background-color: rgb(200, 70, 68); */
+    background-color: green;
     padding: 5px 12px;
     border-radius: 10px;
 }
 #detailsButton{
-    font-size: 20px;
-    background-image: linear-gradient(green,orange,pink);
+    font-size: 15px;
+    background-image: linear-gradient(green,pink);
     /* background-color: rgb(100, 170, 68); */
     padding: 5px 12px;
     border-radius: 10px;

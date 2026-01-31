@@ -17,20 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     if (selectedProduct) {
       productDetails.innerHTML =
-        `
- <main>
+        `<main>
           <div class="product_container">
             <div class="product_image">
               <img src="${selectedProduct.thumbnail}" alt="${selectedProduct.title}">
             </div>
 
             <div class="product_info">
-              <h1q34wyuz5ei9ovgb>${selectedProduct.title}</h1q34wyuz5ei9ovgb>
+              <h1>${selectedProduct.title}</h1>
               <p><b>Brand:</b> ${selectedProduct.brand}</p>
               <p><b>Category:</b> ${selectedProduct.category}</p>
               <p><b>Description:</b> ${selectedProduct.description}</p>
-            <p class="price">₹ ${selectedProduct.price * 90}</p>
-
+              <p class="price">₹ ${selectedProduct.price * 90}</p>
 
               <div class="btn_group">
                 <button class="addTocart" id = "addToCart" onclick="addToCart(${selectedProduct})">Add to Cart</button>
@@ -39,33 +37,21 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
 
-          <div class="reviews">
-            <h2>Customer reviews</h2>
+        <div class="reviews">
+          <h2>Customer reviews</h2>
 <hr>
-            <div class="review">
-              <div class="stars">❤️❤️❤️❤️🖤</div>
-              <p>Great product!</p>
-              <small>By Liam Garcia</small>
-            </div>
+          ${selectedProduct.reviews.map((review)=>`
+            <div class="ratings">${"❤️".repeat(review.rating)}${"🖤".repeat(5 - review.rating)}</div>
+            <p id ="comment">${review.comment}</p>
+            <p id ="name">By <strong>${review.reviewerName}</strong> on ${new Date(review.date)}</p>
 <hr>
-            <div class="review">
-              <div class="stars">❤️❤️❤️🖤🖤</div>
-              <p>Great product!</p>
-              <small>By Ruby Andrews</small>
-            </div>
-<hr>
-            <div class="review">
-              <div class="stars">❤️❤️❤️❤️❤️</div>
-              <p>Worth buying!</p>
-              <small>By Emma Brown</small>
-            </div>
-          </div>
-        </main>
-
             `
+          )} 
+        </div>
+      </main>
+           `;
       document.getElementById("addToCart").addEventListener("click", () => {
         addToCart(selectedProduct);
-
       });
     }
     else {

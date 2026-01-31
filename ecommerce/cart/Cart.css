@@ -3,9 +3,52 @@
     margin: 0px;
     box-sizing: border-box;
 }
-.cart_item{
+main{
+    margin: 10px 300px;
+}
+.cart_items{
     height: 300px;
-    width: 60%;
-    background-color: red;
+    width: 80%;
+    background-color: whitesmoke;
+    margin-top: 10px;
     display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+#image{
+    overflow: hidden;
+}
+img{
+    height: 300px;
+    width: 300px;
+    /* background-color: aqua; */
+    border-radius: 15px;
+    cursor: pointer;
+}
+img:hover{
+    transition: 1s linear;
+    scale: calc(1.2);
+}
+.product_details{
+    height: 300px;
+    width: 300px;
+    padding: 8px;
+    margin: 10px;
+    /* background-color: blue; */
+    font-size: 15px;
+}
+.product_details p{
+    margin: 10px;
+}
+button{
+    height: 35px;
+    width: 60px;
+    margin-top: 132px;
+    margin-left: 40px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
