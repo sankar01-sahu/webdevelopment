@@ -1,25 +1,25 @@
-document.getElementById("login").addEventListener("click",loginForm);
-
-function loginForm() {
+document.getElementById("login_Container").addEventListener("submit",function loginForm(e){
+  e.preventDefault();
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-  if (email === "" || password === "") {
-    alert("Please fill all details");
-    return;
-  }
-  let loginData = JSON.parse(localStorage.getItem("login")) || [];
+  let loginData = JSON.parse(localStorage.getItem("userData"));
 
-  let user = {
-    email: email,
-    password: password
-  };
-
-  loginData.push(user);
-  localStorage.setItem("login", JSON.stringify(loginData));
-  alert("Login Successfully...");
+  if(loginData.email === email && loginData.password ===password){
+    alert("Login Successfully...");
   window.location.href = "../Home/Home.html";
-}
+  }else{
+    alert("Enter a valid Credential!!");
+  }
+
+  let errorPassword = document.getElementById("errorPassword");
+  let passwordPattern = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&]).{5,}$/;
+  
+    if(!passwordPattern.test(password)){
+        errorPassword.textContent ="Invalid Password.."
+        return;
+    }
+})
 
 function eyePassword(){
     let pswd= document.getElementById("password");

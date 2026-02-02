@@ -12,7 +12,7 @@ function displayCart(){
     cartContent.innerHTML="";
     let totalBill =0;
     if(cart.length ===0){
-        cartContent.innerHTML =`Your cart is Empty. Start Shopping...`;
+        cartContent.innerHTML =`Your cart is Empty. Start Shopping... <button id="shop">Shop</button>`;
     }
     cart.map((product,i)=>{
         totalBill +=Math.floor((product.price)*90)
@@ -44,9 +44,9 @@ function displayCart(){
     });
     totalPrice.innerHTML = `<h2 id="total_Price">Total Price :₹ ${totalBill}</h2>`
 
-    // document.getElementById("remove").addEventListener("click",()=>{
-    //     remove.cartContent;
-    // })
+    document.getElementById("shop").addEventListener("click",()=>{
+        window.location.href ="../Home/Home.html";
+    })
 }
 
 function removeFromCart(index){

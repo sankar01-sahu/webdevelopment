@@ -9,6 +9,20 @@ document.getElementById("formContainer").addEventListener("submit",function data
     // console.log(email);
     // console.log(password);
     // console.log(mobile);
+    let errorEmail =document.getElementById("errorEmail");
+    let errorPassword = document.getElementById("errorPassword");
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailPattern.test(email)){
+        errorEmail.textContent ="Invalid Email.."
+        return;
+    }
+
+    let passwordPattern = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&]).{5,}$/;
+    if(!passwordPattern.test(password)){
+        errorPassword.textContent ="Invalid Password.."
+        return;
+    }
 
     let userData ={
         name : name,
@@ -21,3 +35,13 @@ document.getElementById("formContainer").addEventListener("submit",function data
     alert("Registration Successfully!!!");
     window.location.href = "../Login/Login.html"; 
 });
+
+function eyePassword(){
+    let pswd= document.getElementById("password");
+
+    if(pswd.type === "password"){
+        pswd.type = "text";
+    }else{
+        pswd.type = "password";
+    }
+}

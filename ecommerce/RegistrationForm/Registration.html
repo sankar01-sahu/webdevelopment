@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="Registration.css">
 </head>
 <body>
@@ -17,12 +18,17 @@
 
         <div class="form_Group">
             <label for="">Email Address</label>
-            <input type="email" id="email" placeholder="Enter your Email.." required>
+            <input type="email" id="email" placeholder="Enter your Email..">
+            <p id="errorEmail"></p>
         </div>
 
         <div class="form_Group">
             <label for="">Password</label>
-            <input type="password" id="password" placeholder="Enter your password.." required>
+            <div id="password_block">
+            <input type="password" id="password" placeholder="Enter your password..">
+            <span onclick="eyePassword()" style="cursor: pointer;"><i class="fa-regular fa-eye-slash"></i></span>
+            <p id="errorPassword"></p>
+            </div>
         </div>
 
         <div class="form_Group">
@@ -30,7 +36,7 @@
             <input type="number" id="mobile" placeholder="Enter your Mobile Number.." required>
         </div>
         <button id="register">Register</button>
-        <p>Already have an account ?<a href="../Login/Login.html">Sign-in</a></p>
+        <p id="paragraph">Already have an account ?<a href="../Login/Login.html">Log-in</a></p>
     </form>
     
     <script src="Registration.js"></script>

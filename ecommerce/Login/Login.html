@@ -10,6 +10,7 @@
 <body>
     <form action="" id="login_Container">
         <h2>Login to your account</h2>
+        <p>Please fill your credentials here!!</p>
         <div class="login_group">
             <label for="">User Name</label>
             <input type="email" id="email" placeholder="Enter your registered email/mobile.." required>
@@ -20,10 +21,12 @@
             <div id="password_block">
             <input type="password" id="password" placeholder="Enter the password.." required>
             <span onclick="eyePassword()" style="cursor: pointer;"><i class="fa-regular fa-eye-slash"></i></span>
+            <p id="errorPassword"></p>
             </div>
         </div>
         <button id="back">Back</button>
-        <button id="login" onclick="loginForm()">Login</button>
+        <button id="login" onclick="loginForm()">Submit</button>
+        <p>Don't have an account?<a href="../../ecommerce/RegistrationForm/Registration.html">Register</a></p>
     </form>
     
     <script src="Login.js"></script>
